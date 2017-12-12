@@ -62,28 +62,39 @@ public class SolutionScanner {
 
         Question question = (Question)clz.getAnnotation(Question.class);
 
-        System.out.println("id: " + question.id());
-        System.out.println("title: " + question.title());
-        System.out.println("hint: " + question.hint());
+        print("id: " + question.id());
+        print("title: " + question.title());
+        print("hint: " + question.hint());
 
         for(Method method : clz.getDeclaredMethods()){
 
             Best best = method.getAnnotation(Best.class);
 
             if(best != null) {
-                System.out.println("[Best] complexity: " + best.complexity() + ", thought: " + best.thought());
+                print("[Best] complexity: " + best.complexity() + ", thought: " + best.thought());
             }
 
             Self self = method.getAnnotation(Self.class);
 
             if(self != null) {
-                System.out.println("[Self] complexity: " + self.complexity() + ", thought: " + self.thought());
+                if("miss".equals(self.thought())){
+                    eprint("[Self] " + self.thought());
+                }
+                print("[Self] complexity: " + self.complexity() + ", thought: " + self.thought());
             }
 
         }
 
         System.out.println();
 
+    }
+
+    private static void print(String s){
+        System.out.println(s);
+    }
+
+    private static void eprint(String s){
+        System.err.println(s);
     }
 
     public static void main(String[] args) throws Exception {
