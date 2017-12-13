@@ -8,7 +8,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Question(id = 217, title = "Contains Duplicate", hint = "return true if any value appears at least twice, else false")
-public class ContainsDuplicate {
+public class EContainsDuplicate {
 
     @Best
     @Self(thought = "Set dereplication", complexity = "O(n)")

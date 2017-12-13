@@ -11,7 +11,7 @@ import java.util.Set;
 
 
 @Question(id = 291, title = "Contains Duplicate II", hint = "two distinct indices i and j : 1.nums[i] = nums[j], 2. |i - j| <= k")
-public class ContainsDuplicateII {
+public class EContainsDuplicateII {
 
     @Best(thought = "Set remove when i > k", complexity = "O(n)")
     public boolean leetcode(int[] nums, int k) {

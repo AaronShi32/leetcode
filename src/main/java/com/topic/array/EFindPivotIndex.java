@@ -8,7 +8,7 @@ import com.util.Self;
         "pivot index define as Sum[0, pivot) = Sum(pivot, len-1).\n" +
         "If no such index exists, we should return -1. " +
         "If there are multiple pivot indexes, you should return the left-most pivot index")
-public class FindPivotIndex {
+public class EFindPivotIndex {
 
     @Best(thought = "double traversal", complexity = "O(n)")
     static int leetcode(int[] nums){
