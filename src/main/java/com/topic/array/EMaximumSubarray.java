@@ -36,7 +36,9 @@ public class EMaximumSubarray {
     }
 
     @Self(thought = "miss")
-    static void solution2(){}
+    static void solution2(){
+
+    }
 
 
 
