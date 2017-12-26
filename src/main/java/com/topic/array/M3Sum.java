@@ -11,7 +11,7 @@ import java.util.List;
 @Question(id = 15, title = "3Sum", hint = "" +
         "1. Find all unique triplets in the array which a + b + c = 0" +
         "2. The solution set must not contain duplicate triplets.")
-public class E3Sum {
+public class M3Sum {
 
     @Best
     @Self(thought = "sort + binary serach", complexity = "O(n)")
