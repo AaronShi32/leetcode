@@ -1,4 +1,5 @@
 package com.topic.array;
+import com.util.Best;
 import com.util.Question;
 import com.util.Self;
 
@@ -12,7 +13,7 @@ import java.util.Map;
 public class M4SumII {
 
 
-    @Self(thought = "map<sum ,times> and divide-and-conquer", complexity = "O(n2)")
+    @Best(thought = "map<sum ,times> and divide-and-conquer", complexity = "O(n2)")
     static int leetcode(int[] A, int[] B, int[] C, int[] D){
         Map<Integer, Integer> map = new HashMap<>();
         int len = A.length;
