@@ -6,7 +6,6 @@ import com.util.Self;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 @Question(id = 39, title = "Combination Sum", hint = "" +
