@@ -7,29 +7,46 @@ public class TreeFactory {
 
 
 
-    public static TreeNode levelBuild(int[] nums){
-        //root = [10,5,-3,3,2,null,11,3,-2,null,1]
-        TreeNode root = null;
-        for(int i = 0; i < nums.length; i++){
-//            if(nums[i] == null){
+//    public static TreeNode buildLevel(String[] nodes){
+//        TreeNode root = null;
+//        int len = nodes.length;
+//        for(int i = 0; i < len; i++){
 //
+//
+//        }
+//
+//        return root;
+//    }
+//
+//
+//    public static TreeNode buildPreOrder(TreeNode root, String[] nodes){
+//        int len = nodes.length;
+//        for(int i = 0; i < len; i++){
+//            if(nodes[i].equals('#')){
+//                root = null;
 //            }
-        }
+//            else{
+//                root = new TreeNode(Integer.parseInt(nodes[i]));
+//                buildPreOrder(root,)
+//            }
+//
+//        }
+//
+//    }
 
-        return root;
-    }
 
 
 
-
-//    public static TreeNode build(String tree, int type){
-//        tree = tree.replaceAll("null", Constants.EMPTY);
-//        System.out.println(tree);
-//        Object[] arrays = Arrays.
+//    public static TreeNode build(String str, int type){
+//
+//        String[] nodes = str.split(",");
 //        TreeNode root = null;
 //        switch (type){
 //            case Constants.LEVEL:
-//                //root = levelBuild(nums);
+//                root = buildLevel(nodes);
+//                break;
+//            case Constants.PREORDER:
+//                root = buildPreOrder(nodes);
 //                break;
 //            default:
 //                System.err.println("not support");
@@ -40,7 +57,7 @@ public class TreeFactory {
 
 
     public static void main(String[] args){
-        //build("[10,5,-3,3,2,null,11,3,-2,null,1]", 1);
+        //build("10,5,-3,3,2,null,11,3,-2,null,1", 1);
 
 
     }
