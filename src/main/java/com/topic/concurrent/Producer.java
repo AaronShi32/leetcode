@@ -1,11 +1,11 @@
-package com.topic.concurrent.communication;
+package com.topic.concurrent;
 
-public class Customer implements Runnable {
+public class Producer implements Runnable{
 
     private Product product;
     private int TIME = 20;
 
-    public Customer(Product product){
+    public Producer(Product product){
         this.product = product;
     }
 
@@ -13,12 +13,12 @@ public class Customer implements Runnable {
     public void run() {
         for(int i = 0; i < TIME; i++) {
             try {
-                Thread.sleep(40);
+                Thread.sleep(30);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
 
-            this.product.dec();
+            this.product.inc();
         }
     }
 }

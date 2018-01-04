@@ -1,4 +1,4 @@
-package com.topic.concurrent.communication;
+package com.topic.concurrent;
 
 public class Product {
 

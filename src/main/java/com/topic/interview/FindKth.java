@@ -57,16 +57,16 @@ public class FindKth {
         }
         else if(K - 1 > i) {
             findKthLarger(K,i+1,end);
+        } else {
+            System.out.println(array[K - 1]);
         }
-        else
-            System.out.println(array[K-1]);
         return;
     }
 
     public static void main(String[] args){
         int len = array.length - 1;
         findKthSmaller(10,0,len);
-        findKthSmaller(11,0,len);
+        findKthLarger(11,0,len);
     }
 
 }

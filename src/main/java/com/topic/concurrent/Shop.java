@@ -1,4 +1,4 @@
-package com.topic.concurrent.communication;
+package com.topic.concurrent;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
