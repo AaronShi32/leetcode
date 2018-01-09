@@ -10,6 +10,8 @@ public class Constants {
 
     public final static int POSTORDER = 4;
 
+    public final static int SAMPLE = 5;
+
     public final static String EMPTY = "#";
 
 }

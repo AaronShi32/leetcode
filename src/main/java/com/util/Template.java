@@ -17,5 +17,6 @@ public class Template {
     public static void main(String[] args){
         int h;
         System.out.println((h = 20) ^ (h >>> 16));
+
     }
 }
