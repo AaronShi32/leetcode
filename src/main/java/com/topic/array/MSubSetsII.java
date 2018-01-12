@@ -7,8 +7,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-@Question(id = 78, title = "Subsets", hint = "no duplicate")
-public class MSubsets {
+@Question(id = 90, title = "Subsets II", hint = "has duplicate")
+public class MSubSetsII {
 
     @Self(thought = "dfs", complexity = "")
     static List<List<Integer>> solution(int[] nums){
@@ -18,12 +18,13 @@ public class MSubsets {
         return list;
     }
 
-    private static void backtrack(List<List<Integer>> list , List<Integer> tempList, int [] nums, int start){
-        list.add(new ArrayList<>(tempList));
+    private static void backtrack(List<List<Integer>> list , List<Integer> dp, int [] nums, int start){
+        list.add(new ArrayList<>(dp));
         for(int i = start; i < nums.length; i++){
-            tempList.add(nums[i]);
-            backtrack(list, tempList, nums, i + 1);
-            tempList.remove(tempList.size() - 1);
+            if(i > start && nums[i] == nums[i - 1]) continue;
+            dp.add(nums[i]);
+            backtrack(list, dp, nums, i + 1);
+            dp.remove(dp.size() - 1);
         }
     }
 
