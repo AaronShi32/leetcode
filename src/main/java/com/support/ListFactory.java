@@ -1,4 +1,4 @@
-package com.topic.linkedlist;
+package com.support;
 
 public class ListFactory {
 

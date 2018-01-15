@@ -1,9 +1,8 @@
 package com.topic.linkedlist;
 
+import com.support.ListNode;
 import com.util.Question;
 import com.util.Self;
-
-import java.util.List;
 
 @Question(id = 142, title = "Linked List Cycle II", hint = "" +
         "1. return the node where the cycle begins")

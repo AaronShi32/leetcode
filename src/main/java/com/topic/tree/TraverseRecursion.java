@@ -1,5 +1,8 @@
 package com.topic.tree;
 
+import com.support.TreeFactory;
+import com.support.TreeNode;
+
 public class TraverseRecursion {
 
     public static void preOrder(TreeNode root){

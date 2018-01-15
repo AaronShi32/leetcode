@@ -1,5 +1,6 @@
 package com.topic.linkedlist;
 
+import com.support.ListNode;
 import com.util.Best;
 import com.util.Question;
 import com.util.Self;

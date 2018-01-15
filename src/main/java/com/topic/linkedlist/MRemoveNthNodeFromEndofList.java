@@ -1,9 +1,9 @@
 package com.topic.linkedlist;
 
+import com.support.ListFactory;
+import com.support.ListNode;
 import com.util.Question;
 import com.util.Self;
-
-import java.util.Collections;
 
 @Question(id = 19, title = "Remove Nth Node From End of List")
 public class MRemoveNthNodeFromEndofList {

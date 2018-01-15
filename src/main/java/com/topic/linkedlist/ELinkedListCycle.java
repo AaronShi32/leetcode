@@ -1,5 +1,6 @@
 package com.topic.linkedlist;
 
+import com.support.ListNode;
 import com.util.Question;
 
 @Question(id = 141, title = "Linked List Cycle")
