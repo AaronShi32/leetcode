@@ -1,3 +1,0 @@
-# 2017.12.10
-- 561. Array Partition I
--
