@@ -16,6 +16,9 @@ public class ESameTree {
     }
 
     public static void main(String[] args){
-        System.out.print(solution(TreeFactory.buildSample(), TreeFactory.buildSample()));
+        //System.out.print(solution(TreeFactory.buildSample(), TreeFactory.buildSample()));
+        Integer a = 1;
+        Integer b = 1;
+        System.out.println(a == b);
     }
 }

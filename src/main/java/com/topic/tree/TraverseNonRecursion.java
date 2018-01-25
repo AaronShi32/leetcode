@@ -3,6 +3,9 @@ package com.topic.tree;
 import com.support.TreeFactory;
 import com.support.TreeNode;
 
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
 import java.util.Stack;
 
 public class TraverseNonRecursion {
@@ -64,6 +67,27 @@ public class TraverseNonRecursion {
                 }
             }
         }
+    }
+
+    public static void levelOrder(TreeNode root){
+        Queue<TreeNode> queue = new LinkedList<>();
+        List<List<Integer>> wrapList = new LinkedList<>();
+
+        queue.offer(root);
+
+        while(!queue.isEmpty()){
+            int level = queue.size();
+
+            List<Integer> subList = new LinkedList<>();
+
+            for(int i = 0; i < level; i++) {
+                if(queue.peek().left != null) queue.offer(queue.peek().left);
+                if(queue.peek().right != null) queue.offer(queue.peek().right);
+                subList.add(queue.poll().val);
+            }
+            wrapList.add(subList);
+        }
+        System.out.println(wrapList);
     }
 
     public static void main(String[] args){
