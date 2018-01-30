@@ -5,7 +5,7 @@ import com.util.Question;
 import com.util.Self;
 
 @Question(id = 665, title = "Non-decreasing Array", hint = "" +
-        "check if it could become non-decreasing by modifying at most 1 element")
+        "1. check if it could become non-decreasing by modifying at most 1 element")
 public class ENondecreasingArray {
 
     @Best(thought = "change element to judge", complexity = "O(n)")

@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Queue;
 import java.util.Stack;
 
-public class TraverseNonRecursion {
+public class TraverseIteratively {
 
     public static void preOrder(TreeNode root){
         Stack<TreeNode> s = new Stack<>();

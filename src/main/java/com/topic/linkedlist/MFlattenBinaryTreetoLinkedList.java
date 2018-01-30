@@ -2,10 +2,7 @@ package com.topic.linkedlist;
 
 import com.support.TreeFactory;
 import com.support.TreeNode;
-import com.topic.tree.TraverseNonRecursion;
 import com.util.Question;
-
-import java.util.Stack;
 
 @Question(id = 114, title = "Flatten Binary Tree to Linked List", hint = "pre-order")
 public class MFlattenBinaryTreetoLinkedList {
