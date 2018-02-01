@@ -26,9 +26,28 @@ public class Daily {
         return;
     }
 
+    @Date(d = "2018-02-01", title = "binary tree in-order iteratively")
+    public static void a2(TreeNode root){
+        Stack<TreeNode> s = new Stack<>();
+        TreeNode point = root;
+        while(point != null || !s.empty()){
+            while (point != null){
+                s.push(point);
+                point = point.left;
+            }
+            if(!s.empty()){
+                point = s.pop();
+                System.out.print(point.val + " ");
+                point = point.right;
+            }
+        }
+        return;
+    }
+
 
     public static void main(String[] args){
         TreeNode root = TreeFactory.buildSample();
         a1(root);
+        a2(root);
     }
 }
