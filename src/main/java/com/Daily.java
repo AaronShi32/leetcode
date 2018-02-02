@@ -1,5 +1,6 @@
 package com;
 
+import com.support.ListNode;
 import com.support.TreeFactory;
 import com.support.TreeNode;
 import com.util.Date;
@@ -44,10 +45,42 @@ public class Daily {
         return;
     }
 
+    @Date(d = "2018-02-02", title = "valid parentheses")
+    public static boolean a3(String s){
+        Stack<Character> container = new Stack<>();
+        for(Character c : s.toCharArray()){
+            if(c == '(')
+                container.push(')');
+            else if(c == '[')
+                container.push(']');
+            else if(c == '{')
+                container.push('}');
+            else if(container.isEmpty() || c != container.pop()){
+                return false;
+            }
+        }
+        return container.isEmpty();
+    }
+
+    @Date(d = "2018-02-05", title = "linkedlist has cycle")
+    public static void a4(ListNode head){
+
+    }
+
+    @Date(d = "2018-02-06", title = "quick sort")
+    public static void a5(int[] nums){
+
+    }
+
+    @Date(d = "2018-02-07", title = "binary tree post-order iteratively")
+    public static void a6(int[] nums){
+
+    }
 
     public static void main(String[] args){
         TreeNode root = TreeFactory.buildSample();
         a1(root);
         a2(root);
+        System.out.print(a3("[]()[]{()}["));
     }
 }
