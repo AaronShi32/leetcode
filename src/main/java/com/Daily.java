@@ -5,6 +5,7 @@ import com.support.TreeFactory;
 import com.support.TreeNode;
 import com.util.Date;
 
+import java.util.List;
 import java.util.Stack;
 
 public class Daily {
@@ -63,7 +64,18 @@ public class Daily {
     }
 
     @Date(d = "2018-02-05", title = "linkedlist has cycle")
-    public static void a4(ListNode head){
+    public static boolean a4(ListNode head){
+        if(head == null || head.next == null)
+            return false;
+        ListNode slow = head, fast = head;
+        while(fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+            if(slow == fast){
+                return true;
+            }
+        }
+        return false;
 
     }
 
