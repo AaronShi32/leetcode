@@ -29,6 +29,12 @@
             <version>1.2.16</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.taobao.diamond</groupId>
+            <artifactId>diamond-client</artifactId>
+            <version>3.8.3</version>
+        </dependency>
+
 
     </dependencies>
 
