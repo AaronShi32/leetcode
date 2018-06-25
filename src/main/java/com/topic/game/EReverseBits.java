@@ -6,7 +6,4 @@ import com.util.Question;
         "Reverse bits of a given 32 bits unsigned integer.")
 public class EReverseBits {
 
-    public int reverseBits(int n) {
-
-    }
 }

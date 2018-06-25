@@ -1,0 +1,148 @@
+
+设定管控模式。
+分时间段设定在当前时间段下，设备所处的状态。
+MO命令：TBD
+命令类型： set
+— creator: teacher 表示这段时间是老师管控的；parent 表示这段时间是家长管控的。
+— action.name  表示管控的子项，目前计划支持下面几种。
+        mute: 表示是否需要静音设备。true表示需要静音，false表示不需要静音。
+        lock_mode: 表示设备是否需要处于黑屏状态。 true 表示要处于黑屏状态，fasle 表示不需要。
+        app_wl: 可运行应用白名单列表。参数是一组应用的包名。
+        web_wl: 网络管控白名单列表。  参数是一组域名。
+        web_bl: 网络管控黑名单列表，参数是一组域名或者ip。
+— exclude： 一个数组，数组元素里的start表示例外的开始日期，end表示例外的结束日期。
+            在这个日期里面，老师创建的管控时间段是不生效的，家长可以修改这段日子里的所有时间段
+            的管控规则。这个用来实现寒暑假和节假日。
+— faeture_phone: 一个数组，表示仅仅用来实现打电话、收发短消息功能的最小的应用集。每一个元素是对应的应用的包名。
+
+参数：jason字串，格式如下：
+{
+    "Mon": [
+        {
+            "start": "01:01:01",
+            "end": "02:02:02",
+            "creater": "teacher",
+            "action": [
+                {
+                    "name": "mute",
+                    "parameter": {
+                        "enable": "true"
+                    }
+                },
+                {
+                    "name": "lock_mode",
+                    "parameter": {
+                        "enable": "true"
+                    }
+                },
+                {
+                    "name": "app_wl",
+                    "parameter": {
+                        "field": [
+                            "com.example.app1",
+                            "com.example.app2"
+                        ]
+                    }
+                },
+                {
+                    "name": "web_wl",
+                    "parameter": {
+                        "field": [
+                            "www.baidu.com",
+                            "www.sina.com"
+                        ]
+                    }
+                },
+                {
+                    "name": "web_bl",
+                    "parameter": {
+                        "field": [
+                            "192.168.1.1",
+                            "www.qq.com"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "start": "03:03:03",
+            "end": "15:15:15"
+        }
+    ],
+    "Tues": [
+        {
+            "start": "01:01:01",
+            "end": "02:02:02",
+            "creater": "parent",
+            "action": [
+                {
+                    "name": "mute",
+                    "parameter": {
+                        "enable": "false"
+                    }
+                },
+                {
+                    "name": "lock_mode",
+                    "parameter": {
+                        "enable": "false"
+                    }
+                },
+                {
+                    "name": "app_wl",
+                    "parameter": {
+                        "field": [
+                            "com.example.app1",
+                            "com.example.app2"
+                        ]
+                    }
+                },
+                {
+                    "name": "web_wl",
+                    "parameter": {
+                        "field": [
+                            "www.baidu.com",
+                            "www.sina.com"
+                        ]
+                    }
+                },
+                {
+                    "name": "web_bl",
+                    "parameter": {}
+                }
+            ]
+        },
+        {
+            "start": "03:03:03",
+            "end": "15:15:15"
+        }
+    ],
+    "exclude": [
+        {
+            "start": "20180631",
+            "end": "20180731"
+        },
+        {
+            "start": "20180403",
+            "end": "20180405"
+        }
+    ],
+    "faeture_phone": [
+        "com.app.app1",
+        "com.app.app2"
+    ]
+}
+
+设定管控模式。
+打开或者关闭老师／家长的模式管控。
+MO命令：TBD
+命令类型： set
+[
+    {
+        "creater": "teacher",
+        "enalbe": "true"
+    },
+    {
+        "creater": "parent",
+        "enable": "false"
+    }
+]

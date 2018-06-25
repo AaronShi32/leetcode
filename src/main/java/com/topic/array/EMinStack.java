@@ -9,27 +9,5 @@ import com.util.Question;
         "4. getMin() -- Retrieve the minimum element in the stack.")
 public class EMinStack {
 
-    /**
-     * initialize your data structure here.
-     */
-    public MinStack() {
-
-    }
-
-    public void push(int x) {
-
-    }
-
-    public void pop() {
-
-    }
-
-    public int top() {
-
-    }
-
-    public int getMin() {
-
-    }
 }
 
