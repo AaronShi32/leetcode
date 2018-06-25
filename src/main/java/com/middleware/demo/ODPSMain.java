@@ -9,10 +9,6 @@ import java.net.URL;
 
 public class ODPSMain {
 
-    private static final String accessKey = "LTAI1mtah7LNyXyI";
-
-    private static final String accessSecret = "HMfPoNkzcu7qEQEkRPIBrOB4tfsgFw";
-
     public static void main(String[] args) throws MalformedURLException {
 //        Account account = new AliyunAccount(accessKey, accessSecret);
 //        Odps odps = new Odps(account);
