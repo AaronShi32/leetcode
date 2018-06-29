@@ -14,7 +14,7 @@ public class MSumRoottoLeafNumbers {
     }
 
     private int sum(TreeNode node){
-        if()
+        return 0;
     }
 
 }
