@@ -5,7 +5,6 @@ import com.util.Question;
 
 import java.util.Deque;
 import java.util.LinkedList;
-import java.util.List;
 
 @Question(id = 86, hint = "Given a linked list and a value x, partition it such that all nodes less than x come before nodes greater than or equal to x.")
 public class MPartitionList {
