@@ -20,7 +20,7 @@ public class RPCExporter {
 
     private static Executor executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 
-    public void export(String hostname, int port) throws IOException {
+    public static void export(String hostname, int port) throws IOException {
 
         ServerSocket server = new ServerSocket();
         server.bind(new InetSocketAddress(hostname, port));
