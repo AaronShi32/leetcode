@@ -1,4 +1,4 @@
-package com.topic.interview;
+package com.practice;
 
 public class HLFUCache {
 
@@ -7,7 +7,7 @@ public class HLFUCache {
     }
 
     public int get(int key) {
-
+        return 0;
     }
 
     public void put(int key, int value) {

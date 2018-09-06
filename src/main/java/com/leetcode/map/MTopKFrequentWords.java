@@ -1,4 +1,4 @@
-package com.topic.map;
+package com.leetcode.map;
 
 import com.util.Question;
 
@@ -17,28 +17,24 @@ public class MTopKFrequentWords {
 
     public static List<String> topKFrequent(String[] words, int k) {
 
-        List<String> result = new ArrayList<>();
-
-        Map<String, Integer> word2count = new HashMap<>();
-
-        for(String word : words){
-            word2count.put(word, word2count.getOrDefault(word, 0) + 1);
+        List<String> ans = new ArrayList<>();
+        Map<String, Integer> map = new HashMap<>();
+        for(String s: words){
+            map.put(s, map.getOrDefault(s, 0) + 1);
         }
-
-        PriorityQueue<Map.Entry<String, Integer>> pq = new PriorityQueue<>(
-                (a, b) -> a.getValue() == b.getValue() ? a.getKey().compareTo(b.getKey()) : a.getValue() - b.getValue()
+        PriorityQueue<Map.Entry<String, Integer>> pq = new PriorityQueue<>((a, b) ->
+                a.getValue() == b.getValue() ? b.getKey().compareTo(a.getKey()) : a.getValue() - b.getValue()
         );
 
-        for(Map.Entry<String, Integer> entry: word2count.entrySet()){
+        for(Map.Entry<String, Integer> entry: map.entrySet()){
             pq.offer(entry);
             if( pq.size() > k )
                 pq.poll();
         }
-
-        while(!pq.isEmpty())
-            result.add(pq.poll().getKey());
-
-        return result;
+        while(!pq.isEmpty()){
+            ans.add(0, pq.poll().getKey());
+        }
+        return ans;
 
     }
 

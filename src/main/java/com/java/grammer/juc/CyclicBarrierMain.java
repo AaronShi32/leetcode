@@ -6,7 +6,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 /**
- * 回环栅栏，通过它可以实现让一组线程等待至某个状态之后再全部同时执行
+ * 回环栅栏，通过它可以实现让一组线程等待至某个状态之后再全部同时执行, 子线程去 await
  */
 public class CyclicBarrierMain {
 

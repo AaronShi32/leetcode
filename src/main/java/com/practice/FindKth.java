@@ -1,5 +1,6 @@
-package com.topic.interview;
+package com.practice;
 
+// 参考 quickSelect
 public class FindKth {
 
     private static int[] array = {99,5,32,6,34,6,23,76,587,354,213,62,43,64,124,124,6,47,346,234,0};

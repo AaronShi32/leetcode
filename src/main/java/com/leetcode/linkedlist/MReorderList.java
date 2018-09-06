@@ -1,5 +1,6 @@
-package com.topic.linkedlist;
+package com.leetcode.linkedlist;
 
+import com.support.ListFactory;
 import com.support.ListNode;
 import com.util.Question;
 
@@ -11,7 +12,7 @@ import java.util.LinkedList;
         "3. You may not modify the values in the list's nodes, only nodes itself may be changed.")
 public class MReorderList {
 
-    public void reorderList(ListNode head) {
+    public static void reorderList(ListNode head) {
 
         Deque<ListNode> deque = new LinkedList<>();
 
@@ -36,4 +37,10 @@ public class MReorderList {
         }
     }
 
+
+    public static void main(String[] args){
+        ListNode head = ListFactory.build(new int[]{1,2,3,4,5});
+        reorderList(head);
+        ListFactory.print(head);
+    }
 }

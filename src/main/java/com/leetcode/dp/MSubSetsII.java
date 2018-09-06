@@ -1,4 +1,4 @@
-package com.topic.dp;
+package com.leetcode.dp;
 
 import com.util.Question;
 import com.util.Self;

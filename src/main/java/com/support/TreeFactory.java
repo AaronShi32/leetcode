@@ -17,8 +17,10 @@ public class TreeFactory {
           d.left = e;
           TreeNode f = new TreeNode(8);
           e.right = f;
-          TreeNode g = new TreeNode(6);
+          TreeNode g = new TreeNode(5);
           b.right = g;
+          TreeNode h = new TreeNode(7);
+          g.left = h;
           return root;
       }
 

@@ -1,0 +1,26 @@
+### DFS
+79. Word Search
+
+### BFS
+127. Word Ladder
+542. 01 Matrix
+207. Course Schedule
+691. Stickers to Spell Word
+
+### SORT
+324. Wiggle Sort II
+148. Sort List
+
+### TREE
+331. Verify Preorder Serialization of a Binary Tree
+
+
+### BIT
+260. Single Number III (diff ^= -diff and XOR)
+
+### Backtracking
+PermutationsII 重复的用 used 数组标识, 当且仅当 i > 0 && nums[i] == nums[i - 1] && !used[i], 即重复的元素只有在前面元素已使用的情况下才可使用
+Permutations 从 0 开始, 其他从 start 开始
+
+### DP
+132. Palindrome Partitioning II

@@ -1,4 +1,4 @@
-package com.topic.backtracking;
+package com.leetcode.backtracking;
 
 import com.util.Question;
 

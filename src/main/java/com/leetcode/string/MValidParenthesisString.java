@@ -1,4 +1,4 @@
-package com.topic.string;
+package com.leetcode.string;
 
 import com.util.Question;
 

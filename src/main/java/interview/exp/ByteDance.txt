@@ -1,0 +1,8 @@
+Type: Onsite - 3
+Date: 2018-09-02 10:30
+Location: 王府井世纪2层
+Position: 金融后端开发
+Detail:
+1. Tair路由实现原理
+2. 消息队列持久化实现: Berkeley DB, Hbase
+---------------------------
