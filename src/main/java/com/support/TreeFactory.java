@@ -24,6 +24,21 @@ public class TreeFactory {
           return root;
       }
 
+
+      public static TreeNode buildBST(){
+          TreeNode root = new TreeNode(5);
+          TreeNode a = new TreeNode(3);
+          TreeNode b = new TreeNode(6);
+          TreeNode c = new TreeNode(2);
+          TreeNode d = new TreeNode(4);
+          TreeNode e = new TreeNode(1);
+          root.left = a;
+          root.right = b;
+          a.left = c;
+          a.right = d;
+          c.left = e;
+          return root;
+      }
 //    public static TreeNode buildLevel(String[] nodes){
 //        TreeNode root = null;
 //        int len = nodes.length;

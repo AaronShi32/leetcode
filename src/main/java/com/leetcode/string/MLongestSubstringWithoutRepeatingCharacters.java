@@ -1,10 +1,12 @@
-package com.topic.string;
+package com.leetcode.string;
 
 import com.util.Best;
 import com.util.Question;
 
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 
 @Question(id = 3, title = "Longest Substring Without Repeating Characters", hint = "" +
         "1. Given \"abcabcbb\", the answer is \"abc\", which the length is 3." +
@@ -32,5 +34,7 @@ public class MLongestSubstringWithoutRepeatingCharacters {
 
     public static void main(String[] args){
         System.out.println(lengthOfLongestSubstring("pwwkew"));
+        System.out.println(lengthOfLongestSubstring("aab"));
+        Map<Integer, Integer> map = new ConcurrentHashMap<>();
     }
 }
