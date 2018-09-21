@@ -1,4 +1,4 @@
-package com.topic.interview;
+package com.practice;
 
 import com.util.Question;
 

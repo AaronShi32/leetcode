@@ -1,4 +1,4 @@
-package com.topic.tree;
+package com.leetcode.tree;
 
 import com.support.TreeNode;
 import com.util.Question;

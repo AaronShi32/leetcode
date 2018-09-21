@@ -1,4 +1,4 @@
-package com.topic.interview;
+package com.practice;
 
 import com.util.Question;
 
@@ -124,7 +124,6 @@ public class HLRUCache2 {
         System.out.println(lru.get(1));
         System.out.println(lru.get(3));
         System.out.println(lru.get(6));
-
     }
 
 }
