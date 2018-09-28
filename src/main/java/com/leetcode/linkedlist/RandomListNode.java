@@ -1,4 +1,4 @@
-package com.topic.linkedlist;
+package com.leetcode.linkedlist;
 
 public class RandomListNode {
 

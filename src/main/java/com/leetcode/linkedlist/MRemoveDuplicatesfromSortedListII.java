@@ -1,4 +1,4 @@
-package com.topic.linkedlist;
+package com.leetcode.linkedlist;
 
 import com.support.ListNode;
 import com.util.Question;
@@ -89,6 +89,10 @@ public class MRemoveDuplicatesfromSortedListII {
             point = point.next;
         }
         deleteDuplicatesSolution1(fake.next);
+
+
+        String str = "1,2,3,,";
+        System.out.println(str.split(",").length);
     }
 
 }

@@ -1,6 +1,15 @@
 # LinkedList
-725. Split Linked List in Parts
+[A/TC: O(1)]725. Split Linked List in Parts
 [P]328. Odd Even Linked List
-109. Convert Sorted List to Binary Search Tree
-86. Partition List
-[P]92. Reverse Linked List II
+[R]109. Convert Sorted List to Binary Search Tree
+[A/TC: O(1)]86. Partition List
+[R][P 3指针加反转]92. Reverse Linked List II
+[R][涉及到的解法比较好, 知识点比较多]143. Reorder List
+[A/TC: O(nlogn)][归并排序]148. Sort List
+[R-][区间反转]25.Reverse Nodes in k-Group
+
+# Backtracking
+[visited, 重复 (条件)continue, 排序才能 i - 1]Permutations II, Subsets II
+[reuse]Combination Sum
+[]Generate Parentheses
+[dfs 返回 false 的案例]Word Search

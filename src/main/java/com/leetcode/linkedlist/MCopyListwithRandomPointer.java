@@ -1,4 +1,4 @@
-package com.topic.linkedlist;
+package com.leetcode.linkedlist;
 
 import com.util.Question;
 import com.util.Self;
