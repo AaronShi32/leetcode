@@ -24,8 +24,17 @@ public class TreeFactory {
           return root;
       }
 
-
-      public static TreeNode buildBST(){
+    /**
+     *       5
+     *      / \
+     *     3   6
+     *    / \
+     *   2   4
+     *  /
+     * 1
+     * @return
+     */
+    public static TreeNode buildBST(){
           TreeNode root = new TreeNode(5);
           TreeNode a = new TreeNode(3);
           TreeNode b = new TreeNode(6);

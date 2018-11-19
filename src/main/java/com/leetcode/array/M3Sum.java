@@ -19,6 +19,10 @@ public class M3Sum {
         List<List<Integer>> res = new ArrayList<>();
         Arrays.sort(nums);
         for (int i = 0; i + 2 < nums.length; i++) {
+
+            if(nums[i] > 0) // key step: 如果 a > 0, 则找不出 b、c 使得 a + b + c = 0
+                break;
+
             if (i > 0 && nums[i] == nums[i - 1]) {              // skip same result
                 continue;
             }

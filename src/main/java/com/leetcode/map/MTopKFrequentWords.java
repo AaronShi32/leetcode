@@ -22,17 +22,16 @@ public class MTopKFrequentWords {
         for(String s: words){
             map.put(s, map.getOrDefault(s, 0) + 1);
         }
-        PriorityQueue<Map.Entry<String, Integer>> pq = new PriorityQueue<>((a, b) ->
-                a.getValue() == b.getValue() ? b.getKey().compareTo(a.getKey()) : a.getValue() - b.getValue()
+        PriorityQueue<Map.Entry<String, Integer>> pq = new PriorityQueue<>(
+                (a, b) ->  a.getValue() == b.getValue() ? a.getKey().compareTo(b.getKey()) : (b.getValue() - a.getValue())
         );
 
-        for(Map.Entry<String, Integer> entry: map.entrySet()){
-            pq.offer(entry);
-            if( pq.size() > k )
-                pq.poll();
+        for(Map.Entry<String, Integer> e: map.entrySet()){
+            pq.offer(e);
         }
-        while(!pq.isEmpty()){
-            ans.add(0, pq.poll().getKey());
+
+        while(ans.size() < k){
+            ans.add(pq.poll().getKey());
         }
         return ans;
 

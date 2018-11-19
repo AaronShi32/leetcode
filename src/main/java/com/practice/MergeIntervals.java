@@ -3,6 +3,7 @@ package com.practice;
 import com.support.Interval;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -10,7 +11,7 @@ public class MergeIntervals {
 
     public static List<Interval> merge(List<Interval> intervals) {
 
-        intervals.sort((i1, i2) -> Integer.compare(i1.start, i2.start));
+        intervals.sort(Comparator.comparingInt(i -> i.start));
 
         List<Interval> result = new LinkedList<>();
         int start = intervals.get(0).start;

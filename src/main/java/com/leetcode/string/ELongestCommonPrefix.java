@@ -1,10 +1,10 @@
-package com.topic.string;
+package com.leetcode.string;
 
 import com.util.Best;
 import com.util.Self;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.Arrays;
+import java.util.Comparator;
 
 public class ELongestCommonPrefix {
 
@@ -23,10 +23,25 @@ public class ELongestCommonPrefix {
         return prefix;
     }
 
+
+    public static String  solution2(String[] strs){
+        if(strs == null || strs.length < 2){
+            return "";
+        }
+        Arrays.sort(strs, Comparator.comparingInt(s -> s.length()));
+        String shortWord = strs[0], targetWord = strs[strs.length - 1];
+        String prefix = "";
+        for(int i = 0; i < shortWord.length(); i++){
+            if(shortWord.charAt(i) != targetWord.charAt(i)){
+                break;
+            }
+            prefix += shortWord.charAt(i) + "";
+        }
+        return prefix;
+    }
+
+
     public static void main(String[] args){
-        System.out.println(solution(tc));
-        String c = "car";
-        String b = "y";
-        System.out.println(c.indexOf(b));
+        System.out.println(solution2(tc));
     }
 }

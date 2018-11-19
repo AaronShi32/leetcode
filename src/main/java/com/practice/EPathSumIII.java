@@ -1,4 +1,4 @@
-package com.topic.interview;
+package com.practice;
 
 import com.support.TreeNode;
 import com.util.Question;

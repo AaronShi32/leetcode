@@ -1,0 +1,12 @@
+VIP 解锁题目
+
+[M: 前序非递归遍历]285.Inorder Successor in BST
+[E: 按起始时间排序 + pq + 遍历 + 比较条件: interval[i].start < pq.peek()]252.MeetingRooms
+[M: 按起始时间排序 + pq + 遍历 + 比较条件: interval[i].start < pq.peek() + 计数]253 Meeting Rooms II
+[M: Map 统计次数, put 时候检查 map.size() > K, remove or count -1 时得出 max]340.Longest Substring with At Most K Distinct Characters
+[M: O(4 * 10) + O(10): G家follow up]681. Next Closest Time
+[H: BST 中序非递归遍历, 记录 pre gap]272. Closest Binary Search Tree Value II
+[E: 递归 dfs]339. Nested List Weight Sum
+            /364. Nested List Weight Sum II
+[H: 区间找补集, 全部加到 pq 中, 先 poll() 一个作为标杆, 比较合并]759. Employee Free Time
+[M: 先找后消循环]723.Candy Crush

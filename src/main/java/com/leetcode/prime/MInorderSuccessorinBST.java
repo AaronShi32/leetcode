@@ -7,6 +7,7 @@ import java.util.Stack;
 
 public class MInorderSuccessorinBST {
 
+    // 寻找BST中序遍历的后继元素
     public static TreeNode inOrderSuccessor(TreeNode root, int val){
         if(root == null){
             return null;

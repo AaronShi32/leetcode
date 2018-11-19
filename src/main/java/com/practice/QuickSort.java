@@ -1,6 +1,5 @@
 package com.practice;
 
-import java.util.Arrays;
 import java.util.Random;
 
 //最坏: n(n-1)/2
@@ -38,10 +37,29 @@ public class QuickSort {
         }
     }
 
+    private static int partitionV2(int[] nums, int left, int right){
+        if(left == right) return left;
+        int l = left, r = right, poivt = nums[left];
+        while(l < r){
+            while(l < r && nums[l] <= poivt){
+                l ++;
+            }
+            nums[r] = nums[l];
+            while(l < r && nums[r] >= poivt){
+                r --;
+            }
+            nums[l] = nums[r];
+        }
+        nums[l] = poivt;
+        return l;
+    }
+
 
     public static void main(String[] args){
         int[] array = {99,5,32,6,34,6,23,76,587,354,213,62,43,64,124,124,6,47,346,234,0};
-        sort(array, 0, array.length - 1);
-        System.out.println(Arrays.toString(array));
+//        sort(array, 0, array.length - 1);
+//        System.out.println(Arrays.toString(array));
+        System.out.println(partitionV2(array, 0, array.length - 1));
+
     }
 }

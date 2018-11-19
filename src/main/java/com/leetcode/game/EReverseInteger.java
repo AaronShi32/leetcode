@@ -1,4 +1,4 @@
-package com.topic.game;
+package com.leetcode.game;
 
 import com.util.Best;
 import com.util.Question;

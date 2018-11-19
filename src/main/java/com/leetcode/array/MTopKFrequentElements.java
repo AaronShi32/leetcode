@@ -27,7 +27,7 @@ public class MTopKFrequentElements {
         for(int i = bucket.length - 1; i > 0 && k > 0; i--){
             if(bucket[i] != null){
                 ret.addAll(bucket[i]);
-                k -= bucket[i].size();
+                k --;
             }
         }
 
@@ -36,8 +36,8 @@ public class MTopKFrequentElements {
 
 
     public static void main(String[] args){
-        int h;
-        System.out.println((h = 20) ^ (h >>> 16));
+        int[] nums = {4, 1, -1, 2, -1, 2, 3};
+        System.out.println(solution(nums, 2));
     }
 
 }

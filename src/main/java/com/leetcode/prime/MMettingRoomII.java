@@ -10,14 +10,14 @@ public class MMettingRoomII {
 
     public static int minMeetingRooms(Interval[] intervals) {
         Arrays.sort(intervals, Comparator.comparingInt(i -> i.start)); // 按最早时间排序
-        PriorityQueue<Integer> minHeap = new PriorityQueue<>();
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
         int rooms = 0;
         for (int i = 0; i < intervals.length; i++) {
-            minHeap.offer(intervals[i].end);
-            if (intervals[i].start < minHeap.peek()) { // 开始时间小于最早结束时间, 需要增加 room
+            pq.offer(intervals[i].end);
+            if (intervals[i].start < pq.peek()) { // 开始时间小于最早结束时间, 需要增加 room
                 rooms++;
             } else {
-                minHeap.poll(); // 允许最早时间结束后, 去掉
+                pq.poll(); // 允许最早时间结束后, 去掉
             }
         }
         return rooms;
