@@ -3,12 +3,15 @@ package skill.redis;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
+import redis.clients.jedis.JedisPubSub;
 
 public class RedisExample {
 
     private static JedisPool jedisPool;
 
     private static Jedis redis;
+
+    private static JedisPubSub jedisPubSub;
 
     static {
 
@@ -33,7 +36,7 @@ public class RedisExample {
 
 
     public static void main(String[] args){
-
+        redis.subscribe(jedisPubSub, "cctv1", "cctv2");
     }
 
 }

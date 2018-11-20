@@ -56,7 +56,8 @@
 
 
 # Base 基础算法
-[704.Binary Search]
+[A][l <= r, r = nums.length - 1]704. Binary Search
+[A][二分搜索: x - arr[mid] > arr[mid + k] - x]658. Find K Closest Elements
 
 # String
 [while, set, i, j, 从头remove, 加入时取max]3.Longest Substring Without Repeating Characters
@@ -85,7 +86,7 @@
 # Top K
 [Map + (Array(List<Integer>[], O(n)) or PQ(按次数降序, O(nlogn)))]347. Top K Frequent Elements
 [Map + PQ(比较条件 a.getValue() == b.getValue() ? b.getKey().compareTo(a.getKey()): (b.getValue() - a.getValue()))]692. Top K Frequent Words
-[]658. Find K Closest Elements
+
 
 # 第 K 个
 [A][QuickSelect 快选算法(partition): poivt = nums[(left + right)/2], while 判断 no equal, k <= right, k >= left]215.Kth Largest Element in an Array/Kth Smaller Element in an Array
