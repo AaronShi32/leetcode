@@ -27,7 +27,7 @@ public class MTopKFrequentElements {
         for(int i = bucket.length - 1; i > 0 && k > 0; i--){
             if(bucket[i] != null){
                 ret.addAll(bucket[i]);
-                k --;
+                k -= bucket[i].size();
             }
         }
 

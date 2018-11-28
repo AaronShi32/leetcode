@@ -29,9 +29,34 @@ public class EMeetingRooms {
         return true;
     }
 
+    public static boolean pratice(Interval[] intervals){
+
+        if(intervals == null || intervals.length == 0) return false;
+
+        Arrays.sort(intervals, Comparator.comparingInt(o -> o.start));
+
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+
+        int rooms = 0;
+
+        for(int i = 0; i < intervals.length; i++){
+            pq.offer(intervals[i].end);
+            if(intervals[i].start < pq.peek()){
+                rooms ++;
+                if(rooms > 1)
+                    return false;
+            }else{
+                pq.poll();
+            }
+        }
+
+        return true;
+    }
+
     public static void main(String[] args){
-        Interval[] bookingTimes = {new Interval(0, 30), new Interval(5, 10), new Interval(15, 20)};
-        System.out.println(needOneMoreRoom(bookingTimes));
+        //Interval[] bookingTimes = {new Interval(0, 30), new Interval(5, 10), new Interval(15, 20)};
+        Interval[] bookingTime2s = {new Interval(7, 10), new Interval(2, 4)};
+        System.out.println(needOneMoreRoom(bookingTime2s));
     }
 
 }
