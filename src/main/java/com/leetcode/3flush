@@ -87,6 +87,11 @@
 [3个遍历, 1. intervals.get(i).end < newInterval.start 2. intervals.get(i).start <= newInterval.end]57.Insert Interval
 [A: 注意任务的排序顺序: (a, b) -> a.getValue() != b.getValue() ? b.getValue() - a.getValue() : a.getKey() - b.getKey()]621. Task Scheduler
 
+# 链表合并
+[A: 递归(99%) mergeK -> merge2 || 最小堆(33%) pq ]23. Merge k Sorted Lists
+[A: 掌握递归写法, 四个 return]21. Merge Two Sorted Lists
+
+
 # Top K
 pq用的比较器: Comparator.comparingInt(o -> o.intValue()) 升序
               Comparator.comparingInt(o -> -o.intValue()) 降序
