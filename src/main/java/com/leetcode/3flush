@@ -50,11 +50,12 @@
 # Tree
 [递归/BFS]101.Symmetric Tree
 [A][map + queue]235. Lowest Common Ancestor
-[路径和系列:
-112. boolean 递归, 三句(2判断, 1返回, 用 ||)
-113. List<List<Integer>> dfs, 用 if/else, 必须 remove(size() - 1)
-437
-124]112. Path Sum/113. Path Sum II/437. Path Sum III/124.Binary Tree Maximum Path Sum
+[路径和系列: I && II 是根到叶子, III 是中间任意节点和]
+
+[A: 递归, 三句] 112. Path Sum
+/[A: if(满足条件){ add to ans }else{dfs(left and right)} remove(size - 1)]113. Path Sum II
+/[Map: preSum + dfs]437. Path Sum III
+/124.Binary Tree Maximum Path Sum
 [BFS: ColumnTreeNode + Map<column, List<TreeNode>>] 314.Binary Tree Vertical Order Traversal
 
 
