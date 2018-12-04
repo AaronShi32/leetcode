@@ -20,3 +20,6 @@ Prime 解锁题目
    75. Sort Colors[one-pass 不太理解, two-pass 先计数然后填满, 不能直接排序]
 
 [M: 加入根, 三个递归, find left -> leafs -> right]545.Boundary of Binary Tree
+[H: Graph的题 -> 拓扑排序: 纵向 build graph]269. Alien Dictionary
+
+[M: reverse/plus/reverse]369. Plus One Linked List

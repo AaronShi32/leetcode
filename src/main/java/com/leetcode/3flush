@@ -29,8 +29,8 @@
 [前处理 Map 再 BFS] 815.Bus Routes
 
 # Graph
-[Topological Sorting 拓扑排序: 生成图, 统计入度, 选择入度为0的点进行BFS]207. Course Schedule
-[Topological Sorting 拓扑排序: 记录值]285. Course Schedule II
+[A: 判断有向图是否有环 --> 拓扑排序][Topological Sorting 拓扑排序: 生成图, 统计入度, 选择入度为0的点进行BFS]207. Course Schedule
+[A][Topological Sorting 拓扑排序: 记录值]285. Course Schedule II
 
 # DFS
 [find(记录节点和parent映射, Map) + dfs(三个方向)]863. All Nodes Distance K in Binary Tree

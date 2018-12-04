@@ -6,7 +6,7 @@ import java.util.Queue;
 /**
  * 拓扑排序
  */
-public class HCourseScheduleII {
+public class MCourseScheduleII {
 
     // 拓扑排序 + BFS 记录解
     public static int[] findOrder(int numCourses, int[][] prerequisites) {
@@ -15,12 +15,12 @@ public class HCourseScheduleII {
         int[] indegree = new int[numCourses];
 
         for(int i = 0; i < prerequisites.length; i++){ //key step: 转化矩阵, 统计各结点入度
-            int ready = prerequisites[i][0];
-            int pre = prerequisites[i][1];
-            if(matrix[pre][ready] == 0){
-                indegree[ready] ++;
+            int in = prerequisites[i][0];
+            int out = prerequisites[i][1];
+            if(matrix[out][in] == 0){
+                indegree[in] ++;
             }
-            matrix[pre][ready] = 1;
+            matrix[out][in] = 1;
         }
 
         Queue<Integer> q = new LinkedList<>();
