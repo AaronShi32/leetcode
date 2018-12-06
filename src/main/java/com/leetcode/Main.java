@@ -14,5 +14,8 @@ public class Main {
 
         List<Integer>[] bucket = new List[6];
 
+        List<List<Integer>> ans = new ArrayList<>();
+        ans.remove(ans.size() - 1);
+
     }
 }

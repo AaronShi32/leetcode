@@ -23,9 +23,9 @@
 [树的层次遍历问题集合]513. Find Bottom Left Tree Value[A: BFS from right to left, last node is leftmost]
                     /199. Binary Tree Right Side View[A: BFS from right to left]
                     /515. Find Largest Value in Each Tree Row[A: 层找最大/小均用 Integer.MIN_VALUE/MAX_VALUE 初始化]
-                    /111. Minimum Depth of Binary Tree
-                    /103. Binary Tree Zigzag Level Order Traversal
-                    /637. Average of Levels in Binary Tree
+                    /111. Minimum Depth of Binary Tree[A: 判断叶子节点返回 len]
+                    /103. Binary Tree Zigzag Level Order Traversal[A: BFS + zag 变量]
+                    /637. Average of Levels in Binary Tree [A: double sum = 0.0]
 [前处理 Map 再 BFS] 815.Bus Routes
 
 # Graph
@@ -98,8 +98,23 @@ pq用的比较器: Comparator.comparingInt(o -> o.intValue()) 升序
               Comparator.comparingInt(o -> -o.intValue()) 降序
 
 [A: bucket[]效率高/PQ效率低][Map + (Array(List<Integer>[], O(n)) or PQ(按次数降序, O(nlogn)))]347. Top K Frequent Elements
-[Map + PQ(比较条件 a.getValue() == b.getValue() ? b.getKey().compareTo(a.getKey()): (b.getValue() - a.getValue()))]692. Top K Frequent Words
+[A][Map + PQ(比较条件 a.getValue() == b.getValue() ? b.getKey().compareTo(a.getKey()): (b.getValue() - a.getValue()))]692. Top K Frequent Words
 
 
 # 第 K 个
 [A][QuickSelect 快选算法(partition): poivt = nums[(left + right)/2], while 判断 no equal, k <= right, k >= left]215.Kth Largest Element in an Array/Kth Smaller Element in an Array
+
+
+# 双记录 cur, max
+[A: cur = Math.max(nums[i], cur + nums[i]); max = Math.max(cur, max);]53. Maximum Subarray
+
+# 最长子串
+[A: if contains(remove from begin char) else(add, max, j++)]3. Longest Substring Without Repeating Characters
+[A: 分治法: build map 统计次数, 选择次数小于k的字符作为 filter, split 分割然后递归]395. Longest Substring with At Least K Repeating Characters
+
+# Anagrams
+[A: 利用 Anagrams 特性, 排序后的单词一致, Map 映射进行 group]49. Group Anagrams
+
+# 矩阵相关
+[A: O(m + n) 左下角出发]74. Search a 2D Matrix
+[A: O(m + n) 右上角出发]240. Search a 2D Matrix II
