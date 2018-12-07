@@ -32,11 +32,14 @@
 [A: 判断有向图是否有环 --> 拓扑排序][Topological Sorting 拓扑排序: 生成图, 统计入度, 选择入度为0的点进行BFS]207. Course Schedule
 [A][Topological Sorting 拓扑排序: 记录值]285. Course Schedule II
 
+
+
 # DFS
 [find(记录节点和parent映射, Map) + dfs(三个方向)]863. All Nodes Distance K in Binary Tree
 [FloodFill算法]200. Number of Islands[A if(){dfs(); ans++}]
               /[A]695. Max Area Of Island 用 area = dfs(...) 标记返回, 是 dfs 返回值的好案例
               /463. Island Perimeter 计算边数: islands * 4 - neighbours * 2
+[很经典的DFS, 跟 Islands 差不多]547. Friend Circles
 
 
 
@@ -118,3 +121,11 @@ pq用的比较器: Comparator.comparingInt(o -> o.intValue()) 升序
 # 矩阵相关
 [A: O(m + n) 左下角出发]74. Search a 2D Matrix
 [A: O(m + n) 右上角出发]240. Search a 2D Matrix II
+
+
+# 数字类
+402. Remove K Digits
+
+# 二分: 旋转数组类
+[旋转N次]153. Find Minimum in Rotated Sorted Array
+[旋转一次][先区分段(lo,mid,hi)再区分边界(target, mid, lo(hi))]33. Search in Rotated Sorted Array
