@@ -1,3 +1,5 @@
-二分搜索: O(log n)
+二分搜索: O(logn)
 
-堆: 建堆 O(n), 排序 O(n log n) 不稳定排序
+堆: 建堆 O(n), 排序 O(nlogn) 不稳定排序
+
+快排: O(nlogn)

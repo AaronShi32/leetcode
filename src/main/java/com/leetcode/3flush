@@ -128,4 +128,5 @@ pq用的比较器: Comparator.comparingInt(o -> o.intValue()) 升序
 
 # 二分: 旋转数组类
 [旋转N次]153. Find Minimum in Rotated Sorted Array
-[旋转一次][先区分段(lo,mid,hi)再区分边界(target, mid, lo(hi))]33. Search in Rotated Sorted Array
+[A][旋转N次, 元素不重复][先区分段(lo,mid,hi)再区分边界(target, mid, lo(hi))]33. Search in Rotated Sorted Array
+[33 的 Follow Up: 旋转N次且重复元素]81. Search in Rotated Sorted Array II
