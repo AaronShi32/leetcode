@@ -6,58 +6,31 @@ import com.util.Question;
 public class MKthLargestElementinanArray {
 
     public int findKthLargest(int[] nums, int k) {
-        if (nums == null || nums.length == 0) {
-            return 0;
-        }
-        int left = 0;
-        int right = nums.length - 1;
-        while (true) {
-            int pos = quickSelect(nums, left, right);
-            if (pos + 1 == k) {
-                return nums[pos];
-            }
-            else if (pos + 1 > k) {
-                right = pos - 1;
-            }
-            else {
-                left = pos + 1;
-            }
-        }
+        if (nums == null || nums.length == 0) return 0;
+        return quickSelect(nums, 0, nums.length - 1, nums.length - k);
     }
 
-    private int quickSelect(int[] nums, int l, int r) {
-        int left = l, right = r;
-        int pivot = left;
-        while (left < right) {
-            while (left < right && nums[left] >= nums[pivot]) {
-                left++;
-            }
-            while (left < right && nums[right] < nums[pivot]) {
-                right--;
-            }
-            // swap
-            if (left < right) {
-                swap(nums, left, right);
-                left++;
-                right--;
-            }
-
+    private int quickSelect(int[] nums, int start, int end, int k) {
+        if (start > end) return nums[k];
+        int i = start, j = end;
+        while (i <= j) {
+            while (i <= j && nums[i] < nums[start]) i++; // 找到左边第一个大于 nums[start] 的元素
+            while (i <= j && nums[j] > nums[start]) j--; // 找到右边第一个小于 nums[start] 的元素
+            if (i <= j) swap(nums, i++, j--); //交换彼此到正确位置
         }
-        if (nums[left] < nums[pivot]) {
-            swap(nums, pivot, left - 1);
-            return left - 1;
-        }
-        else {
-            swap(nums, pivot, left);
-            return left;
-        }
-
+        // 跳出循环则说明 i > j 此时,
+        // start ---- j
+        //               nums[start]
+        //                            i ---- end
+        if (k <= j) quickSelect(nums, start, j, k); // start --- j
+        if (k >= i) quickSelect(nums, i, end, k);   // i --- end
+        return nums[k];
     }
 
     private void swap(int[] nums, int i, int j) {
-        int temp = nums[i];
+        int tmp = nums[i];
         nums[i] = nums[j];
-        nums[j] = temp;
+        nums[j] = tmp;
     }
 
 }

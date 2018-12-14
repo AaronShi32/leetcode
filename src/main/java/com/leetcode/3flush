@@ -7,6 +7,8 @@
 [A 奇数链merge条件][涉及到的解法比较好, 知识点比较多]143. Reorder List
 [A/TC: O(nlogn)][归并排序]148. Sort List
 [R-][区间反转]25.Reverse Nodes in k-Group
+[18ms: if(l1 != null || l2 != null || carry != 0)]2.Add Two Numbers
+follow up: 445. Add Two Numbers II [先 reverse]
 
 # Backtracking
 [visited, 重复 (条件)continue, 排序才能 i - 1]Permutations II, Subsets II
@@ -54,6 +56,9 @@
 [递归/BFS]101.Symmetric Tree
 [A][map + queue]235. Lowest Common Ancestor
 [路径和系列: I && II 是根到叶子, III 是中间任意节点和]
+[序列化和反序列化系列] 449. Serialize and Deserialize BST[序列化: 前序遍历; 反序列化: Queue]
+                     /297. Serialize and Deserialize Binary Tree[同上]
+                     /428. Serialize and Deserialize N-ary Tree
 
 [A: 递归, 三句] 112. Path Sum
 /[A: if(满足条件){ add to ans }else{dfs(left and right)} remove(size - 1)]113. Path Sum II
@@ -105,14 +110,14 @@ pq用的比较器: Comparator.comparingInt(o -> o.intValue()) 升序
 
 
 # 第 K 个
-[A][QuickSelect 快选算法(partition): poivt = nums[(left + right)/2], while 判断 no equal, k <= right, k >= left]215.Kth Largest Element in an Array/Kth Smaller Element in an Array
+[A/2][QuickSelect 快选算法(partition): poivt = nums[(left + right)/2], while 判断 no equal, k <= right, k >= left]215.Kth Largest Element in an Array/Kth Smaller Element in an Array
 
 
 # 双记录 cur, max
 [A: cur = Math.max(nums[i], cur + nums[i]); max = Math.max(cur, max);]53. Maximum Subarray
 
 # 最长子串
-[A: if contains(remove from begin char) else(add, max, j++)]3. Longest Substring Without Repeating Characters
+[A/2][A: if contains(remove) else (add, max, j++)]3. Longest Substring Without Repeating Characters
 [A: 分治法: build map 统计次数, 选择次数小于k的字符作为 filter, split 分割然后递归]395. Longest Substring with At Least K Repeating Characters
 
 # Anagrams
@@ -125,8 +130,15 @@ pq用的比较器: Comparator.comparingInt(o -> o.intValue()) 升序
 
 # 数字类
 402. Remove K Digits
+[A: 折半 数字题基本都是: x = rev * 10 + x % 10]9. Palindrome Number
+
 
 # 二分: 旋转数组类
-[旋转N次]153. Find Minimum in Rotated Sorted Array
-[A][旋转N次, 元素不重复][先区分段(lo,mid,hi)再区分边界(target, mid, lo(hi))]33. Search in Rotated Sorted Array
-[33 的 Follow Up: 旋转N次且重复元素]81. Search in Rotated Sorted Array II
+[A: 处于升序队列][旋转一次]153. Find Minimum in Rotated Sorted Array
+[A][旋转一次, 元素不重复][先区分左边or右边是有序的(mid, hi) 再区分边界 (target, mid, lo(hi))]33. Search in Rotated Sorted Array
+[A][33 的 Follow Up: 旋转一次且重复元素: 先区分左边or右边or相等是有序的(mid, hi)]81. Search in Rotated Sorted Array II
+[]4.Median of Two Sorted Arrays
+
+# Trie Tree 前缀树
+- 大文件中找出现10次的高频词
+

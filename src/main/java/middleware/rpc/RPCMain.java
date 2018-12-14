@@ -1,4 +1,4 @@
-package skill.rpc;
+package middleware.rpc;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;

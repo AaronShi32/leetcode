@@ -1,4 +1,4 @@
-package skill.redis;
+package middleware.redis;
 
 public interface Service {
 

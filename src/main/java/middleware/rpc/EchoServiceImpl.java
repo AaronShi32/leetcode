@@ -1,4 +1,4 @@
-package skill.rpc;
+package middleware.rpc;
 
 public class EchoServiceImpl implements EchoService {
 

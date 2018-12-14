@@ -7,30 +7,20 @@ public class MFindMinimuminRotatedSortedArray {
 
     public int findMin(int[] nums) {
 
-        if(nums == null || nums.length == 0){
-            return 0;
-        }
-
-        if(nums.length == 1){
-            return nums[0];
-        }
-
-        int l = 0;
-        int r = nums.length - 1;
-        while(l < r){
-            int mid = l + (r - l)/2;
-            if(mid > 0 && nums[mid] < nums[mid - 1]){
+        if (nums == null || nums.length == 0) return 0;
+        int lo = 0, hi = nums.length - 1, mid = -1;
+        while (lo < hi) {
+            mid = lo + (hi - lo) / 2;
+            if (mid > 0 && nums[mid] < nums[mid - 1]) { // 旋转的点 pivot
                 return nums[mid];
             }
-            if(nums[l] <= nums[mid] && nums[mid] > nums[r]){
-                l = l + 1;
+            if (nums[lo] <= nums[mid] && nums[mid] > nums[hi]) { // 处于mid升序队列 那么最小的只能在右边 lo = mid + 1
+                lo = mid + 1;
             } else {
-                r = r - 1;
+                hi = mid - 1;
             }
-
         }
-
-        return nums[l];
+        return nums[lo];
 
     }
 }

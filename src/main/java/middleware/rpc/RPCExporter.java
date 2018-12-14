@@ -1,6 +1,4 @@
-package skill.rpc;
-
-import org.apache.log4j.net.SocketServer;
+package middleware.rpc;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;

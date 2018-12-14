@@ -1,4 +1,4 @@
-package skill.zookeeper;
+package middleware.zookeeper;
 
 import org.apache.zookeeper.WatchedEvent;
 import org.apache.zookeeper.Watcher;

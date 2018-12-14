@@ -1,21 +1,20 @@
-package skill.nio;
+package middleware.nio;
 
 import java.nio.ByteBuffer;
 
 /**
- * Gathering Writes (聚合)
+ * Scattering Reads (分散)
  *
  * Channel 间的操作
  *
- * 能较好的处理动态消息
+ * 适用于固定大小的消息
  */
-public class Gather {
+public class Scatter {
 
     public static void main(String[] args){
         ByteBuffer header = ByteBuffer.allocate(128);
         ByteBuffer body   = ByteBuffer.allocate(1024);
-        //write data into buffers
         ByteBuffer[] bufferArray = { header, body };
-        //channel.write(bufferArray);
+        // channel.read(bufferArray);
     }
 }

@@ -1,4 +1,16 @@
-# Two Sum
+------- 进入到以下列表的题目要求: 数量掌握至少2种方法以上/Trade off --------
+
+1. Two Sum
+
 - HashMap O(n)
 - Brute Force O(n2)
 - Two Point O(nlogn)
+
+21. Merge Two Sorted Lists
+
+- Recursion
+- Non-Recursion
+
+
+
+

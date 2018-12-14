@@ -1,4 +1,4 @@
-package skill.redis;
+package middleware.redis;
 
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
