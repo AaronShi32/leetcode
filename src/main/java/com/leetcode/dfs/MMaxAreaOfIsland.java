@@ -23,13 +23,13 @@ public class MMaxAreaOfIsland {
     private int dfs(int[][] grid, int i, int j, int area) {
 
         if(i < 0 || i >= grid.length || j < 0 || j >= grid[0].length || grid[i][j] != 1){
-            return area; // key step
+            return area; // 扩展不了了就返回当前面积 area, 而不是 0
         }
 
         grid[i][j] = 0;
-        area ++;
+        area ++; // 因为每次迭代都会 +1, 所以扩展的时候只需要 = 就好, 而不是 +=
 
-        area = dfs(grid, i, j + 1, area); // key step 向右扩展
+        area = dfs(grid, i, j + 1, area); // 向右扩展
         area = dfs(grid, i, j - 1, area);
         area = dfs(grid, i + 1, j, area);
         area = dfs(grid, i - 1, j, area);
@@ -37,4 +37,5 @@ public class MMaxAreaOfIsland {
         return area;
 
     }
+
 }

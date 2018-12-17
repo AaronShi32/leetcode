@@ -1,21 +1,49 @@
 package com.leetcode;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.support.TreeFactory;
+import com.support.TreeNode;
+
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class Main {
 
+
+    // Encodes a tree to a single string.
+    public String serialize(TreeNode root) {
+        if(root == null) return "#,";
+        StringBuilder sb = new StringBuilder(root.val + ",");
+        sb.append(serialize(root.left));
+        sb.append(serialize(root.right));
+        return sb.toString();
+    }
+
+    // Decodes your encoded data to tree.
+    public TreeNode deserialize(String data) {
+        String[] nodes = data.split(",");
+        Queue<String> q = new LinkedList<>();
+        for(int i = 0; i < nodes.length; i++){
+            q.offer(nodes[i]);
+        }
+        return preOrder(q);
+    }
+
+    private TreeNode preOrder(Queue<String> q){
+        String val = q.poll();
+        if(val.equals("#"))
+            return null;
+        TreeNode root = new TreeNode(Integer.valueOf(val));
+        root.left = preOrder(q);
+        root.right = preOrder(q);
+        return root;
+    }
+
+
     public static void main(String[] args){
-        String s = "3213 321321";
-        String[] words = s.split("\\s");
-        List<Integer> r = new ArrayList<>();
-        int[] n = new int[r.size()];
-        r.toArray(new Integer[r.size()]);
-
-        List<Integer>[] bucket = new List[6];
-
-        List<List<Integer>> ans = new ArrayList<>();
-        ans.remove(ans.size() - 1);
+        Main ins = new Main();
+        String ser = ins.serialize(TreeFactory.buildBST());
+        System.out.println(ser);
+        System.out.println(ins.deserialize(ser));
 
     }
 }
